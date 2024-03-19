@@ -13,19 +13,19 @@ struct NewItemView: View {
     
     var body: some View {
         VStack {
-            Text("New Item")
+            Text("Новая заметка")
                 .font(.system(size: 32))
                 .bold()
                 .padding(.top, 100)
             
             Form {
-                TextField("Title", text: $viewModel.title)
+                TextField("Заметка", text: $viewModel.title)
                     .textFieldStyle(DefaultTextFieldStyle())
                 
-                DatePicker("Due Date", selection: $viewModel.dueDate)
+                DatePicker("Дата", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
                 
-                SettingsOfButton(title: "Save", background: .pink) {
+                SettingsOfButton(title: "Сохранить", background: .pink) {
                     if viewModel.canSave {
                         viewModel.save()
                         newItemPresented = false
@@ -37,8 +37,8 @@ struct NewItemView: View {
             }
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(
-                    title: Text("Error"),
-                    message: Text("Please fill in all fields and select due date that is today or newer")
+                    title: Text("Ошибка"),
+                    message: Text("Пожалуйста, заполните все поля и выберите дату")
                 )
             }
         }

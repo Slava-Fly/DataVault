@@ -16,10 +16,10 @@ struct ProfileView: View {
                 if let user = viewModel.user {
                     profile(user: user)
                 } else {
-                    Text("Loading Profile...")
+                    Text("Загрузка профиля...")
                 }
             }
-            .navigationTitle("Profile")
+            .navigationTitle("Профиль")
         }
         .onAppear {
             viewModel.fetchUser()
@@ -39,19 +39,19 @@ struct ProfileView: View {
         //Info
         VStack(alignment: .leading) {
             HStack {
-                Text("Name: ")
+                Text("Имя: ")
                     .bold()
                 Text(user.name)
             }
             .padding()
             HStack {
-                Text("Email: ")
+                Text("Почта: ")
                     .bold()
                 Text(user.email)
             }
             .padding()
             HStack {
-                Text("Member Since")
+                Text("Дата Входа: ")
                     .bold()
                 Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
             }
@@ -60,7 +60,7 @@ struct ProfileView: View {
         .padding()
 
         //Sign out
-        Button("Log Out") {
+        Button("Выйти") {
             viewModel.logOut()
         }
         .tint(.red)

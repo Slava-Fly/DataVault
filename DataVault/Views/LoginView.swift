@@ -14,7 +14,7 @@ struct LoginView: View {
         NavigationView() {
             VStack {
                 //Header
-                HeaderView(title: "To Do List",
+                HeaderView(title: "DataVault",
                            subtitle: "Get things done",
                            angle: 15,
                            background: .pink)
@@ -26,15 +26,15 @@ struct LoginView: View {
                 
                 //Login form
                 Form {
-                    TextField("Email", text: $viewModel.email)
+                    TextField("Почта", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
-                    SecureField("Password", text: $viewModel.password)
+                    SecureField("Пароль", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
                     SettingsOfButton(
-                        title: "Log In",
+                        title: "Войти",
                         background: .blue) {
                             viewModel.login()
                         }
@@ -44,9 +44,9 @@ struct LoginView: View {
                 
                 //Create account
                 VStack {
-                    Text("New around here?")
+                    Text("Новый пользователь?")
                     
-                    NavigationLink("Create An Account",
+                    NavigationLink("Создать аккаунт",
                     destination: RegisterView())
                 }
                 .padding(.bottom, 50)

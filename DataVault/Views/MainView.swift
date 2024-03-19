@@ -21,14 +21,19 @@ struct MainView: View {
     @ViewBuilder
     var accountView: some View {
         TabView {
+            ToDoListPasswordView(userId: viewModel.currentUserId)
+                .tabItem {
+                    Label("Пароль", systemImage: "key")
+                }
+            
             ToDoListView(userId: viewModel.currentUserId)
                 .tabItem {
-                    Label("Note", systemImage: "note.text")
+                    Label("Заметка", systemImage: "note.text")
                 }
             
             ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.circle")
+                    Label("Профиль", systemImage: "person.circle")
                 }
         }
     }

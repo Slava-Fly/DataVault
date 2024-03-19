@@ -14,22 +14,22 @@ struct RegisterView: View {
         VStack {
             //Header
             HeaderView(title: "Register",
-                       subtitle: "Start organizing todo",
+                       subtitle: "Start organizing data",
                        angle: -15,
                        background: .orange)
             
             Form {
-                TextField("Full Name", text: $viewModel.name)
+                TextField("Полное Имя", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
-                TextField("Email Address", text: $viewModel.email)
+                TextField("Электронная почтв", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocapitalization(.none)
-                TextField("Password", text: $viewModel.password)
+                TextField("Пароль", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
                 
-                SettingsOfButton(title: "Create Account", background: .green) {
+                SettingsOfButton(title: "Создать Аккаунт", background: .green) {
                     viewModel.register()
                 }
                 .padding()
