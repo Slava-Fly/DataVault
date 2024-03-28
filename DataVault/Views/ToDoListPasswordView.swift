@@ -36,7 +36,6 @@ struct ToDoListPasswordView: View {
                             }
                             .tint(.red)
                         }
-
                 }
                 .listStyle(PlainListStyle())
             }

@@ -21,6 +21,11 @@ struct MainView: View {
     @ViewBuilder
     var accountView: some View {
         TabView {
+            CardView(userId: viewModel.currentUserId)
+                .tabItem {
+                    Label("Карта", systemImage: "creditcard.fill")
+                }
+            
             ToDoListPasswordView(userId: viewModel.currentUserId)
                 .tabItem {
                     Label("Пароль", systemImage: "key")

@@ -15,6 +15,13 @@
 		CE18A35F2BA842D1000C816E /* ToDoListPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18A35E2BA842D1000C816E /* ToDoListPasswordViewModel.swift */; };
 		CE18A3612BA84300000C816E /* ToDoListItemPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18A3602BA84300000C816E /* ToDoListItemPasswordViewModel.swift */; };
 		CE18A3632BA8522F000C816E /* NewPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18A3622BA8522E000C816E /* NewPasswordViewModel.swift */; };
+		CE510AAE2BB546E7000A1371 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AAD2BB546E7000A1371 /* Card.swift */; };
+		CE510AB02BB5498E000A1371 /* NewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AAF2BB5498E000A1371 /* NewCardView.swift */; };
+		CE510AB32BB58B67000A1371 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AB22BB58B67000A1371 /* CardViewModel.swift */; };
+		CE510AB52BB58B8E000A1371 /* ItemCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AB42BB58B8E000A1371 /* ItemCardViewModel.swift */; };
+		CE510AB72BB58BC0000A1371 /* NewCardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AB62BB58BC0000A1371 /* NewCardViewViewModel.swift */; };
+		CE510ABB2BB5A2C8000A1371 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510ABA2BB5A2C8000A1371 /* CardView.swift */; };
+		CE510ABD2BB5AB95000A1371 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510ABC2BB5AB95000A1371 /* ItemCardView.swift */; };
 		CED2E5972B9D998E002F266D /* DataVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2E5962B9D998E002F266D /* DataVaultApp.swift */; };
 		CED2E5992B9D998E002F266D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2E5982B9D998E002F266D /* MainView.swift */; };
 		CED2E59B2B9D9990002F266D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED2E59A2B9D9990002F266D /* Assets.xcassets */; };
@@ -52,6 +59,13 @@
 		CE18A35E2BA842D1000C816E /* ToDoListPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListPasswordViewModel.swift; sourceTree = "<group>"; };
 		CE18A3602BA84300000C816E /* ToDoListItemPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemPasswordViewModel.swift; sourceTree = "<group>"; };
 		CE18A3622BA8522E000C816E /* NewPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewModel.swift; sourceTree = "<group>"; };
+		CE510AAD2BB546E7000A1371 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CE510AAF2BB5498E000A1371 /* NewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardView.swift; sourceTree = "<group>"; };
+		CE510AB22BB58B67000A1371 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		CE510AB42BB58B8E000A1371 /* ItemCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardViewModel.swift; sourceTree = "<group>"; };
+		CE510AB62BB58BC0000A1371 /* NewCardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewViewModel.swift; sourceTree = "<group>"; };
+		CE510ABA2BB5A2C8000A1371 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CE510ABC2BB5AB95000A1371 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
 		CED2E5932B9D998E002F266D /* DataVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED2E5962B9D998E002F266D /* DataVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataVaultApp.swift; sourceTree = "<group>"; };
 		CED2E5982B9D998E002F266D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -144,12 +158,15 @@
 				CED2E5B32B9DC4AE002F266D /* ProfileView.swift */,
 				CED2E5B52B9DC4C5002F266D /* NewItemView.swift */,
 				CE18A3562BA83539000C816E /* NewPasswordView.swift */,
+				CE510AAF2BB5498E000A1371 /* NewCardView.swift */,
 				CED2E5B72B9DC4DD002F266D /* LoginView.swift */,
 				CED2E5B92B9DC51C002F266D /* RegisterView.swift */,
 				CED2E5B12B9DC45B002F266D /* ToDoListView.swift */,
 				CED2E5BB2B9DC569002F266D /* ToDoListItemView.swift */,
 				CE18A3582BA8386E000C816E /* ToDoListPasswordView.swift */,
 				CE18A35A2BA8389C000C816E /* ToDoListItemPasswordView.swift */,
+				CE510ABA2BB5A2C8000A1371 /* CardView.swift */,
+				CE510ABC2BB5AB95000A1371 /* ItemCardView.swift */,
 				CED2E5D32B9DCF69002F266D /* HeaderView.swift */,
 				CEFD9B902B9DF53C00539EB5 /* SettingsOfButton.swift */,
 			);
@@ -163,12 +180,15 @@
 				CED2E5C72B9DC8B5002F266D /* ProfileViewViewModel.swift */,
 				CED2E5CB2B9DC8DE002F266D /* NewItemViewViewModel.swift */,
 				CE18A3622BA8522E000C816E /* NewPasswordViewModel.swift */,
+				CE510AB62BB58BC0000A1371 /* NewCardViewViewModel.swift */,
 				CED2E5CD2B9DC8F1002F266D /* LoginViewViewModel.swift */,
 				CED2E5CF2B9DC903002F266D /* RegisterViewViewModel.swift */,
 				CED2E5C92B9DC8C8002F266D /* ToDoListViewViewModel.swift */,
 				CED2E5D12B9DC928002F266D /* ToDoListItemViewViewModel.swift */,
 				CE18A35E2BA842D1000C816E /* ToDoListPasswordViewModel.swift */,
 				CE18A3602BA84300000C816E /* ToDoListItemPasswordViewModel.swift */,
+				CE510AB22BB58B67000A1371 /* CardViewModel.swift */,
+				CE510AB42BB58B8E000A1371 /* ItemCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,6 +199,7 @@
 				CED2E5C12B9DC83A002F266D /* User.swift */,
 				CED2E5C32B9DC84F002F266D /* ToDoListItem.swift */,
 				CE18A35C2BA841C6000C816E /* ToDoListPassword.swift */,
+				CE510AAD2BB546E7000A1371 /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE510AB72BB58BC0000A1371 /* NewCardViewViewModel.swift in Sources */,
 				CED2E5B82B9DC4DD002F266D /* LoginView.swift in Sources */,
 				CE18A3592BA8386E000C816E /* ToDoListPasswordView.swift in Sources */,
 				CE18A3572BA83539000C816E /* NewPasswordView.swift in Sources */,
@@ -281,14 +303,19 @@
 				CEFD9B912B9DF53C00539EB5 /* SettingsOfButton.swift in Sources */,
 				CED2E5B42B9DC4AE002F266D /* ProfileView.swift in Sources */,
 				CED2E5D02B9DC903002F266D /* RegisterViewViewModel.swift in Sources */,
+				CE510AB52BB58B8E000A1371 /* ItemCardViewModel.swift in Sources */,
 				CED2E5C62B9DC8A2002F266D /* MainViewViewModel.swift in Sources */,
 				CED2E5992B9D998E002F266D /* MainView.swift in Sources */,
+				CE510ABB2BB5A2C8000A1371 /* CardView.swift in Sources */,
 				CED2E5BA2B9DC51C002F266D /* RegisterView.swift in Sources */,
 				CED2E5C82B9DC8B5002F266D /* ProfileViewViewModel.swift in Sources */,
+				CE510ABD2BB5AB95000A1371 /* ItemCardView.swift in Sources */,
 				CED2E5B22B9DC45B002F266D /* ToDoListView.swift in Sources */,
 				CED2E5C22B9DC83A002F266D /* User.swift in Sources */,
 				CE18A35B2BA8389C000C816E /* ToDoListItemPasswordView.swift in Sources */,
+				CE510AB32BB58B67000A1371 /* CardViewModel.swift in Sources */,
 				CE18A3632BA8522F000C816E /* NewPasswordViewModel.swift in Sources */,
+				CE510AB02BB5498E000A1371 /* NewCardView.swift in Sources */,
 				CED2E5BC2B9DC569002F266D /* ToDoListItemView.swift in Sources */,
 				CED2E5CA2B9DC8C8002F266D /* ToDoListViewViewModel.swift in Sources */,
 				CE18A35F2BA842D1000C816E /* ToDoListPasswordViewModel.swift in Sources */,
@@ -297,6 +324,7 @@
 				CEFD9B932B9E152F00539EB5 /* Extensions.swift in Sources */,
 				CE18A3612BA84300000C816E /* ToDoListItemPasswordViewModel.swift in Sources */,
 				CED2E5C42B9DC84F002F266D /* ToDoListItem.swift in Sources */,
+				CE510AAE2BB546E7000A1371 /* Card.swift in Sources */,
 				CED2E5B62B9DC4C5002F266D /* NewItemView.swift in Sources */,
 				CED2E5CC2B9DC8DE002F266D /* NewItemViewViewModel.swift in Sources */,
 				CE18A35D2BA841C6000C816E /* ToDoListPassword.swift in Sources */,

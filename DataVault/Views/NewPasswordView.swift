@@ -16,7 +16,7 @@ struct NewPasswordView: View {
             Text("Новый пароль")
                 .font(.system(size: 32))
                 .bold()
-                .padding(.top, 100)
+                .padding(.top, 150)
             
             Form {
                 TextField("Аккаунт", text: $viewModel.title)
