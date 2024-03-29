@@ -5,7 +5,6 @@
 //  Created by User on 28.03.2024.
 //
 
-import SwiftUI
 
 import FirebaseFirestoreSwift
 import SwiftUI
@@ -23,26 +22,27 @@ struct CardView: View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    ItemCardView(item: item)
-                        .swipeActions {
-                            Button("Delete") {
-                                viewModel.delete(id: item.id)
+                    NavigationLink(destination: NewCardView(newItemCardPresented: $viewModel.showingNewItemCardView)) {
+                        ItemCardView(item: item)
+                            .swipeActions {
+                                Button("Delete") {
+                                    viewModel.delete(id: item.id)
+                                }
+                                .tint(.red)
                             }
-                            .tint(.red)
-                        }
+                    }
+                    .navigationBarTitleDisplayMode(.inline)
+                    .listStyle(PlainListStyle())
                 }
-                .listStyle(PlainListStyle())
             }
             .navigationTitle("Карты")
             .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
                         viewModel.showingNewItemCardView = true
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
-            }
             .sheet(isPresented: $viewModel.showingNewItemCardView) {
 //                NewPasswordView(newItemPasswordPresented: $viewModel.showingNewItemPasswordView)
                 NewCardView(newItemCardPresented: $viewModel.showingNewItemCardView)

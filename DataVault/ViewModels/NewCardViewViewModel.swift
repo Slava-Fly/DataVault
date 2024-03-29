@@ -22,9 +22,9 @@ class NewCardViewViewModel: ObservableObject {
             return false
         }
         
-//        guard !title.trimmingCharacters(in: .whitespaces).isEmpty else {
-//            return false
-//        }
+        guard !title.trimmingCharacters(in: .whitespaces).isEmpty else {
+            return false
+        }
         
         guard !cardNumber.trimmingCharacters(in: .whitespaces).isEmpty else {
             return false

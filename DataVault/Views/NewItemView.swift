@@ -16,7 +16,7 @@ struct NewItemView: View {
             Text("Новая заметка")
                 .font(.system(size: 32))
                 .bold()
-                .padding(.top, 100)
+                .padding(.top, 20)
             
             Form {
                 TextField("Заметка", text: $viewModel.title)
@@ -24,6 +24,8 @@ struct NewItemView: View {
                 
                 DatePicker("Дата", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
+                //Spacer()
+                    .padding()
                 
                 SettingsOfButton(title: "Сохранить", background: .pink) {
                     if viewModel.canSave {
@@ -33,7 +35,7 @@ struct NewItemView: View {
                         viewModel.showAlert = true
                     }
                 }
-                .padding()
+                //.padding()
             }
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(

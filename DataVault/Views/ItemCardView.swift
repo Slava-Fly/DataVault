@@ -13,21 +13,34 @@ struct ItemCardView: View {
     let item: Card
     
     var body: some View {
-        NavigationView {
-                ZStack {
+        HStack {
+            VStack(alignment: .leading) {
+                ZStack() {
                     Rectangle()
                         .fill(Color.blue)
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .cornerRadius(10)
                     Text(item.title)
                         .font(.body)
+                        //.frame(maxWidth: .infinity, alignment: .top)
                         .foregroundColor(.white)
+                    VStack {
+                       Spacer()
+                            Text(item.cardHolderName)
+                                .font(.body)
+                                .foregroundColor(.white)
+                        
+                        
+                    }
+                    
                 }
                 Spacer()
             }
             .padding()
-        }
+         }
     }
+}
+
 
 
 struct ItemCardView_Previews: PreviewProvider {

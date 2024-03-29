@@ -21,15 +21,19 @@ struct ToDoListView: View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    ToDoListItemView(item: item)
-                        .swipeActions {
-                            Button("Delete") {
-                                viewModel.delete(id: item.id)
+                    NavigationLink(destination: NewItemView(newItemPresented: $viewModel.showingNewItemView)) {
+                        ToDoListItemView(item: item)
+                            .swipeActions {
+                                Button("Delete") {
+                                    viewModel.delete(id: item.id)
+                                }
+                                .tint(.red)
                             }
-                            .tint(.red)
-                        }
+                    }
+                    .navigationBarTitleDisplayMode(.inline)
+                    .listStyle(PlainListStyle())
                 }
-                .listStyle(PlainListStyle())
+                
             }
             .navigationTitle("Заметки")
             .toolbar {

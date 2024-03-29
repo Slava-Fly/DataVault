@@ -29,15 +29,18 @@ struct ToDoListPasswordView: View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    ToDoListItemPasswordView(item: item)
-                        .swipeActions {
-                            Button("Delete") {
-                                viewModel.delete(id: item.id)
+                    NavigationLink(destination: NewPasswordView(newItemPasswordPresented: $viewModel.showingNewItemPasswordView)) {
+                        ToDoListItemPasswordView(item: item)
+                            .swipeActions {
+                                Button("Delete") {
+                                    viewModel.delete(id: item.id)
+                                }
+                                .tint(.red)
                             }
-                            .tint(.red)
-                        }
+                    }
+                    .navigationBarTitleDisplayMode(.inline)
+                    .listStyle(PlainListStyle())
                 }
-                .listStyle(PlainListStyle())
             }
             .navigationTitle("Пароли")
             .toolbar {

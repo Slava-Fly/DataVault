@@ -15,7 +15,7 @@ struct NewCardView: View {
         Text("Новая карта")
             .font(.system(size: 32))
             .bold()
-            .padding(.top, 100)
+            .padding(.top, 20)
         VStack {
             HStack {
                 Image(systemName: "checkmark.circle.fill")
@@ -61,13 +61,15 @@ struct NewCardView: View {
             
         }
         .foregroundStyle(.white)
-        .frame(width: 350, height: 250)
+        .frame(width: 350, height: 220)
         .background {
             LinearGradient(colors: [.purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
         }
         .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
         
         Form {
+            TextField("Card Name", text: $viewModel.title)
+                .textFieldStyle(DefaultTextFieldStyle())
             TextField("Cardholder's Name", text: $viewModel.cardHolderName)
                 .textFieldStyle(DefaultTextFieldStyle())
             TextField("Card Number", text: $viewModel.cardNumber)
@@ -76,6 +78,7 @@ struct NewCardView: View {
                 .textFieldStyle(DefaultTextFieldStyle())
             TextField("CCV", text: $viewModel.ccvCode)
                 .textFieldStyle(DefaultTextFieldStyle())
+           // Spacer()
             
             VStack {
                 SettingsOfButton(title: "Сохранить", background: .pink) {
@@ -86,7 +89,7 @@ struct NewCardView: View {
                         viewModel.showAlert = true
                     }
                 }
-                .padding(.top, 50)
+                //.padding(.top)
             }
         }
         .alert(isPresented: $viewModel.showAlert) {
