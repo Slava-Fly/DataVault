@@ -21,29 +21,33 @@ struct ToDoListView: View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    NavigationLink(destination: NewItemView(newItemPresented: $viewModel.showingNewItemView)) {
-                        ToDoListItemView(item: item)
-                            .swipeActions {
-                                Button("Delete") {
-                                    viewModel.delete(id: item.id)
-                                }
-                                .tint(.red)
+                    ToDoListItemView(item: item)
+                        .swipeActions {
+                            Button("Delete") {
+                                viewModel.delete(id: item.id)
                             }
-                    }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .listStyle(PlainListStyle())
+                            .tint(.red)
+                        }
+                        .listStyle(PlainListStyle())
                 }
                 
             }
             .navigationTitle("Заметки")
+            .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
-                Button {
-                    viewModel.showingNewItemView = true
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItemGroup(placement:
+                        .navigationBarLeading) {
+                            EditButton()
+                        }
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        viewModel.showingNewItemView = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
             }
-            .sheet(isPresented: $viewModel.showingNewItemView) { 
+            .sheet(isPresented: $viewModel.showingNewItemView) {
                 NewItemView(newItemPresented: $viewModel.showingNewItemView)
             }
         }

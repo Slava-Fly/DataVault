@@ -43,7 +43,8 @@ class NewPasswordViewModel: ObservableObject {
             id: newId,
             title: title,
             password: password,
-            isDone: false)
+            isDone: false
+            )
         
         //Save model
         let db = Firestore.firestore()
@@ -52,6 +53,5 @@ class NewPasswordViewModel: ObservableObject {
             .collection("todosPassword")
             .document(newId)
             .setData(newItem.asDictionary())
-        
     }
 }

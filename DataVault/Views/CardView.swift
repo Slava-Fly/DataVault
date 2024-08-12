@@ -22,7 +22,7 @@ struct CardView: View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    NavigationLink(destination: NewCardView(newItemCardPresented: $viewModel.showingNewItemCardView)) {
+                    NavigationLink(destination: CardDetailView(card: item)) {
                         ItemCardView(item: item)
                             .swipeActions {
                                 Button("Delete") {
@@ -30,28 +30,70 @@ struct CardView: View {
                                 }
                                 .tint(.red)
                             }
+                        
                     }
-                    .navigationBarTitleDisplayMode(.inline)
                     .listStyle(PlainListStyle())
                 }
             }
             .navigationTitle("Карты")
+            .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
                         viewModel.showingNewItemCardView = true
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
+            }
+            
             .sheet(isPresented: $viewModel.showingNewItemCardView) {
-//                NewPasswordView(newItemPasswordPresented: $viewModel.showingNewItemPasswordView)
                 NewCardView(newItemCardPresented: $viewModel.showingNewItemCardView)
             }
         }
     }
 }
+
+struct CardDetailView: View {
+    @State var card: Card
     
- 
+    var body: some View {
+        VStack {
+            Form {
+                Section(header: Text("Card Name")) {
+                    TextField("Card Name", text: $card.title)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                }
+                
+                Section(header: Text("Cardholder's Name")) {
+                    TextField("Cardholder's Name", text: $card.cardHolderName)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                }
+                
+                Section(header: Text("Card Number")) {
+                    TextField("Card Number", text: $card.cardNumber)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                }
+                
+                Section(header: Text("Expiry Date")) {
+                    TextField("Expiry Date", text: $card.experationDate)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                }
+                
+                Section(header: Text("CCV")) {
+                    TextField("CCV", text: $card.ccvCode)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                }
+            }
+        }
+        .navigationTitle("Детали Карты")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(userId: "sKk1twQz1UahlQ8YjXcgdVlyPf82")

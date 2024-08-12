@@ -17,32 +17,22 @@ struct ToDoListPasswordView: View {
         self._viewModel = StateObject(wrappedValue: ToDoListPasswordViewModel(userId: userId))
     }
     
-//    func move(from source: IndexSet, to destanation: Int) {
-//        items.move(fromOffsets: source, toOffset: destanation)
-//    }
-//
-//    func deleteItem(at offsets: IndexSet) {
-//        items.remove(atOffsets: offsets)
-//    }
-    
     var body: some View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    NavigationLink(destination: NewPasswordView(newItemPasswordPresented: $viewModel.showingNewItemPasswordView)) {
-                        ToDoListItemPasswordView(item: item)
-                            .swipeActions {
-                                Button("Delete") {
-                                    viewModel.delete(id: item.id)
-                                }
-                                .tint(.red)
+                    ToDoListItemPasswordView(item: item)
+                        .swipeActions {
+                            Button("Delete") {
+                                viewModel.delete(id: item.id)
                             }
-                    }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .listStyle(PlainListStyle())
+                            .tint(.red)
+                        }
+                        .listStyle(PlainListStyle())
                 }
             }
             .navigationTitle("Пароли")
+            .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
                     EditButton()
@@ -61,8 +51,8 @@ struct ToDoListPasswordView: View {
         }
     }
 }
-    
- 
+
+
 struct ToDoListPasswordView_Previews: PreviewProvider {
     static var previews: some View {
         ToDoListPasswordView(userId: "sKk1twQz1UahlQ8YjXcgdVlyPf82")

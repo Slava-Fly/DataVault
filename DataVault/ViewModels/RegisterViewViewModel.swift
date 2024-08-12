@@ -17,6 +17,7 @@ class RegisterViewViewModel: ObservableObject {
     
     init() {}
     
+    //Registration of user
     func register() {
         guard validate() else {
             return

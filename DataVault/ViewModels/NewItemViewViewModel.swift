@@ -55,6 +55,5 @@ class NewItemViewViewModel: ObservableObject {
             .collection("todos")
             .document(newId)
             .setData(newItem.asDictionary())
-        
     }
 }

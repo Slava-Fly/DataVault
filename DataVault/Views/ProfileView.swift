@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewViewModel()
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -25,7 +25,7 @@ struct ProfileView: View {
             viewModel.fetchUser()
         }
     }
-
+    
     @ViewBuilder
     func profile(user: User) -> some View {
         //Avatar
@@ -35,7 +35,7 @@ struct ProfileView: View {
             .foregroundColor(Color.blue)
             .frame(width: 125, height: 125)
             .padding()
-
+        
         //Info
         VStack(alignment: .leading) {
             HStack {
@@ -58,14 +58,14 @@ struct ProfileView: View {
             .padding()
         }
         .padding()
-
+        
         //Sign out
         Button("Выйти") {
             viewModel.logOut()
         }
         .tint(.red)
         .padding()
-
+        
         Spacer()
     }
 }

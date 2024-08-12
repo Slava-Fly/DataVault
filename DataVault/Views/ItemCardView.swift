@@ -8,39 +8,30 @@
 import SwiftUI
 
 struct ItemCardView: View {
-    @StateObject var viewModel = ItemCardViewModel()
-    
     let item: Card
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                ZStack() {
-                    Rectangle()
-                        .fill(Color.blue)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .cornerRadius(10)
-                    Text(item.title)
-                        .font(.body)
-                        //.frame(maxWidth: .infinity, alignment: .top)
-                        .foregroundColor(.white)
-                    VStack {
-                       Spacer()
-                            Text(item.cardHolderName)
-                                .font(.body)
-                                .foregroundColor(.white)
-                        
-                        
-                    }
-                    
-                }
+        
+        ZStack {
+            HStack {
+                Text(item.title)
+                    .font(.headline)
+                    .foregroundColor(.black)
+                
                 Spacer()
             }
             .padding()
-         }
+            .frame(maxWidth: .infinity)
+            .contentShape(Rectangle())
+            
+            HStack {
+                Text(item.cardHolderName)
+                    .font(.body)
+                    .foregroundColor(.gray)
+            }
+        }
     }
 }
-
 
 
 struct ItemCardView_Previews: PreviewProvider {
@@ -53,6 +44,7 @@ struct ItemCardView_Previews: PreviewProvider {
             experationDate: "05.28",
             ccvCode: "888",
             isDone: true
+            
         ))
     }
 }

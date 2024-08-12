@@ -8,6 +8,7 @@
 import FirebaseCore
 import SwiftUI
 
+//Настройка FirebaseCore в SwiftUI
 @main
 struct DocsApp: App {
     init() {

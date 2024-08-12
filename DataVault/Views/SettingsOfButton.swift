@@ -33,8 +33,6 @@ struct SettingsOfButton_Previews: PreviewProvider {
     static var previews: some View {
         SettingsOfButton(title: "Value",
                          background: .pink) {
-            //Action
         }
-                         
     }
 }

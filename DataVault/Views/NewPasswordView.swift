@@ -24,7 +24,7 @@ struct NewPasswordView: View {
                 
                 TextField("Пароль", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
-                    Spacer(minLength: 350)
+                Spacer(minLength: 350)
                 VStack {
                     SettingsOfButton(title: "Сохранить", background: .pink) {
                         if viewModel.canSave {
@@ -34,7 +34,6 @@ struct NewPasswordView: View {
                             viewModel.showAlert = true
                         }
                     }
-                    //.padding(.top)
                 }
             }
             .alert(isPresented: $viewModel.showAlert) {

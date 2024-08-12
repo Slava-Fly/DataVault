@@ -15,6 +15,7 @@ class ProfileViewViewModel: ObservableObject {
     
     init() {}
     
+    // происходит запрос к Firestore для получения данных пользователя
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else {
             return

@@ -71,6 +71,5 @@ class NewCardViewViewModel: ObservableObject {
             .collection("card")
             .document(newId)
             .setData(newItem.asDictionary())
-        
     }
 }

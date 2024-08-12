@@ -24,7 +24,6 @@ struct NewItemView: View {
                 
                 DatePicker("Дата", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
-                //Spacer()
                     .padding()
                 
                 SettingsOfButton(title: "Сохранить", background: .pink) {
@@ -35,7 +34,6 @@ struct NewItemView: View {
                         viewModel.showAlert = true
                     }
                 }
-                //.padding()
             }
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(
@@ -52,7 +50,7 @@ struct NewItemView_Previews: PreviewProvider {
         NewItemView(newItemPresented: Binding(get: {
             return true
         }, set: { _ in
-                                              
+            
         }))
     }
 }

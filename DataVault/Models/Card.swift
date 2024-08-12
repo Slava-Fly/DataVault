@@ -8,17 +8,16 @@
 import Foundation
 
 struct Card: Codable, Identifiable {
-    let id: String
-    let title: String
-    let cardHolderName: String
-    let cardNumber: String
-    let experationDate: String
-    let ccvCode: String
+    var id: String
+    var title: String
+    var cardHolderName: String
+    var cardNumber: String
+    var experationDate: String
+    var ccvCode: String
     
     var isDone: Bool
     
     mutating func setDone(_ state: Bool) {
         isDone = state
     }
-    
 }

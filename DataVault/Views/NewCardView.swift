@@ -78,7 +78,6 @@ struct NewCardView: View {
                 .textFieldStyle(DefaultTextFieldStyle())
             TextField("CCV", text: $viewModel.ccvCode)
                 .textFieldStyle(DefaultTextFieldStyle())
-           // Spacer()
             
             VStack {
                 SettingsOfButton(title: "Сохранить", background: .pink) {
@@ -89,7 +88,6 @@ struct NewCardView: View {
                         viewModel.showAlert = true
                     }
                 }
-                //.padding(.top)
             }
         }
         .alert(isPresented: $viewModel.showAlert) {
@@ -108,8 +106,9 @@ struct NewCardView_Previews: PreviewProvider {
             NewCardView(newItemCardPresented: Binding(get: {
                 return true
             }, set: { _ in
-    
-            }))
+                
+            })
+            )
         }
     }
 }

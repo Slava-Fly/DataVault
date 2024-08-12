@@ -9,8 +9,8 @@ import Foundation
 
 struct ToDoListPassword: Codable, Identifiable {
     let id: String
-    let title: String
-    let password: String
+    var title: String
+    var password: String
     
     var isDone: Bool
     
@@ -18,3 +18,4 @@ struct ToDoListPassword: Codable, Identifiable {
         isDone = state
     }
 }
+

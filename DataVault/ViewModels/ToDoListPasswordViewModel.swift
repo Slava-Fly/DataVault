@@ -27,4 +27,16 @@ class ToDoListPasswordViewModel: ObservableObject {
             .document(id)
             .delete()
     }
+    
+    //Update to do list item password
+        func updateItem(_ item: ToDoListPassword) {
+            let db = Firestore.firestore()
+            db.collection("usersPassword")
+                .document(userId)
+                .collection("todosPassword")
+                .document(item.id)
+                .setData(item.asDictionary())
+    }
 }
+
+

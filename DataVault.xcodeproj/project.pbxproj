@@ -18,7 +18,6 @@
 		CE510AAE2BB546E7000A1371 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AAD2BB546E7000A1371 /* Card.swift */; };
 		CE510AB02BB5498E000A1371 /* NewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AAF2BB5498E000A1371 /* NewCardView.swift */; };
 		CE510AB32BB58B67000A1371 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AB22BB58B67000A1371 /* CardViewModel.swift */; };
-		CE510AB52BB58B8E000A1371 /* ItemCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AB42BB58B8E000A1371 /* ItemCardViewModel.swift */; };
 		CE510AB72BB58BC0000A1371 /* NewCardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510AB62BB58BC0000A1371 /* NewCardViewViewModel.swift */; };
 		CE510ABB2BB5A2C8000A1371 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510ABA2BB5A2C8000A1371 /* CardView.swift */; };
 		CE510ABD2BB5AB95000A1371 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE510ABC2BB5AB95000A1371 /* ItemCardView.swift */; };
@@ -62,7 +61,6 @@
 		CE510AAD2BB546E7000A1371 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CE510AAF2BB5498E000A1371 /* NewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardView.swift; sourceTree = "<group>"; };
 		CE510AB22BB58B67000A1371 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
-		CE510AB42BB58B8E000A1371 /* ItemCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardViewModel.swift; sourceTree = "<group>"; };
 		CE510AB62BB58BC0000A1371 /* NewCardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewViewModel.swift; sourceTree = "<group>"; };
 		CE510ABA2BB5A2C8000A1371 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CE510ABC2BB5AB95000A1371 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				CE18A35E2BA842D1000C816E /* ToDoListPasswordViewModel.swift */,
 				CE18A3602BA84300000C816E /* ToDoListItemPasswordViewModel.swift */,
 				CE510AB22BB58B67000A1371 /* CardViewModel.swift */,
-				CE510AB42BB58B8E000A1371 /* ItemCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				CEFD9B912B9DF53C00539EB5 /* SettingsOfButton.swift in Sources */,
 				CED2E5B42B9DC4AE002F266D /* ProfileView.swift in Sources */,
 				CED2E5D02B9DC903002F266D /* RegisterViewViewModel.swift in Sources */,
-				CE510AB52BB58B8E000A1371 /* ItemCardViewModel.swift in Sources */,
 				CED2E5C62B9DC8A2002F266D /* MainViewViewModel.swift in Sources */,
 				CED2E5992B9D998E002F266D /* MainView.swift in Sources */,
 				CE510ABB2BB5A2C8000A1371 /* CardView.swift in Sources */,

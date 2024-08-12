@@ -38,7 +38,7 @@ struct LoginView: View {
                         background: .blue) {
                             viewModel.login()
                         }
-                    .padding()
+                        .padding()
                 }
                 .offset(y: -50)
                 
@@ -47,7 +47,7 @@ struct LoginView: View {
                     Text("Новый пользователь?")
                     
                     NavigationLink("Создать аккаунт",
-                    destination: RegisterView())
+                                   destination: RegisterView())
                 }
                 .padding(.bottom, 50)
                 
